@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class tvarkarastis extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     protected $fillable = [
         'sale_treniravimosi',
         'laikas',

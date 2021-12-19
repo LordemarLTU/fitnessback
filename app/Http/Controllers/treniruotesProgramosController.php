@@ -22,10 +22,10 @@ class treniruotesProgramosController extends Controller
         ]);
 
         return treniruotes_programa::create([
-            'darbuotojo_vardas' => require('darbuotojo_vardas'),
-            'pavadinimas' => require('pavadinimas'),
-            'dalyviu_skaicius' => require('dalyviu_skaicius'),
-            'trukme' => require('trukme'),
+            'darbuotojo_vardas' => request('darbuotojo_vardas'),
+            'pavadinimas' => request('pavadinimas'),
+            'dalyviu_skaicius' => request('dalyviu_skaicius'),
+            'trukme' => request('trukme'),
         ]);
     }
 
@@ -39,10 +39,10 @@ class treniruotesProgramosController extends Controller
         ]);
 
         $success = $post->update([
-            'darbuotojo_vardas' => require('darbuotojo_vardas'),
-            'pavadinimas' => require('pavadinimas'),
-            'dalyviu_skaicius' => require('dalyviu_skaicius'),
-            'trukme' => require('trukme'),
+            'darbuotojo_vardas' => request('darbuotojo_vardas'),
+            'pavadinimas' => request('pavadinimas'),
+            'dalyviu_skaicius' => request('dalyviu_skaicius'),
+            'trukme' => request('trukme'),
         ]);
     }
 
