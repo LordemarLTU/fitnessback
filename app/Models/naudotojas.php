@@ -12,7 +12,7 @@ class naudotojas extends Model
     protected $fillable = [
         'kliento_nr',
         'vardas',
-        'pavarde',
+        'pavarde', 
         'el_pastas',
         'slaptazodis',
     ];

@@ -10,7 +10,6 @@ class tvarkarastis extends Model
     use HasFactory;
 
     protected $fillable = [
-        'sales_nr',
         'sale_treniravimosi',
         'laikas',
         'uzsiemimo_tipas',
