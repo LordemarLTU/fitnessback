@@ -15,10 +15,10 @@ class treniruotesProgramosController extends Controller
     public function store()
     {
         request()->validate([
-            'darbuotojo_vardas' => 'require',
-            'pavadinimas' => 'require',
-            'dalyviu_skaicius' => 'require',
-            'trukme' => 'require',
+            'darbuotojo_vardas' => 'required',
+            'pavadinimas' => 'required',
+            'dalyviu_skaicius' => 'required',
+            'trukme' => 'required',
         ]);
 
         return treniruotes_programa::create([
@@ -29,7 +29,7 @@ class treniruotesProgramosController extends Controller
         ]);
     }
 
-    public function update(treniruotes_programa $post)
+    public function update(treniruotes_programa $put)
     {
         request()->validate([
             'darbuotojo_vardas' => 'require',
@@ -38,7 +38,7 @@ class treniruotesProgramosController extends Controller
             'trukme' => 'require',
         ]);
 
-        $success = $post->update([
+        $success = $put->update([
             'darbuotojo_vardas' => request('darbuotojo_vardas'),
             'pavadinimas' => request('pavadinimas'),
             'dalyviu_skaicius' => request('dalyviu_skaicius'),

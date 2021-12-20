@@ -17,7 +17,7 @@ class CreateTreniruotesProgramaTable extends Migration
             $table->id('treniruotes_nr');
             $table->string('darbuotojo_vardas');
             $table->string('pavadinimas');
-            $table->integer('dalyviu_sakicius');
+            $table->integer('dalyviu_skaicius');
             $table->integer('trukme');
         });
     }

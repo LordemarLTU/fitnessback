@@ -7,7 +7,7 @@ use App\Models\tvarkarastis;
 use App\Models\treniruotes_programa;
 use App\Models\zinute;
 use App\Http\Controllers\tvarkarastisController;
-use App\Http\Controllers\treniruotesProgramaController;
+use App\Http\Controllers\treniruotesProgramosController;
 use App\Http\Controllers\zinutesController;
 
 /*
