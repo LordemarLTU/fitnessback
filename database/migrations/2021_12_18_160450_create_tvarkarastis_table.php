@@ -14,7 +14,7 @@ class CreateTvarkarastisTable extends Migration
     public function up()
     {
         Schema::create('tvarkarastis', function (Blueprint $table) {
-            $table->id('sales_nr');
+            $table->id();
             $table->string('sale_treniravimosi');
             $table->dateTime('laikas');
             $table->string('uzsiemimo_tipas');

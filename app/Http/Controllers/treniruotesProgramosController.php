@@ -46,12 +46,20 @@ class treniruotesProgramosController extends Controller
         ]);
     }
 
-    public function destroy(treniruotes_programa $post)
+    public function destroy(treniruotes_programa $delete)
     {
-        $success = $post->delete();
+        $success = $delete->delete();
+
 
         return [
-            'success' => $success
+            'success' => $delete,
+            'success' => $success,
         ];
+    }
+    public function getWithID(treniruotes_programa $message)
+    {
+        // return messages::where('id', $message)->firstOrFail();
+
+        return treniruotes_programa::query('id', $message)->firstOrFail();
     }
 }

@@ -42,12 +42,20 @@ class tvarkarastisController extends Controller
         ]);
     }
 
-    public function destroy(tvarkarastis $post)
+    public function destroy(tvarkarastis $delete)
     {
-        $success = $post->delete();
+        $success = $delete->delete();
+
 
         return [
-            'success' => $success
+            'success' => $delete,
+            'success' => $success,
         ];
+    }
+    public function getWithID(tvarkarastis $message)
+    {
+        // return messages::where('id', $message)->firstOrFail();
+
+        return tvarkarastis::query('id', $message)->firstOrFail();
     }
 }

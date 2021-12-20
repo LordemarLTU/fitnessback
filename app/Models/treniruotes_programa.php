@@ -11,7 +11,7 @@ class treniruotes_programa extends Model
     public $timestamps = false;
     protected $table = 'treniruotes_programa';
     protected $fillable = [
-        'treniruotes_nr',
+        'id',
         'darbuotojo_vardas',
         'pavadinimas',
         'dalyviu_skaicius',
