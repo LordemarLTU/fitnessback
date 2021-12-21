@@ -14,7 +14,7 @@ class CreateTreniruotesProgramaTable extends Migration
     public function up()
     {
         Schema::create('treniruotes_programa', function (Blueprint $table) {
-            $table->id('treniruotes_nr');
+            $table->id('id');
             $table->string('darbuotojo_vardas');
             $table->string('pavadinimas');
             $table->integer('dalyviu_skaicius');

@@ -14,7 +14,7 @@ class CreateDarbuotojasTable extends Migration
     public function up()
     {
         Schema::create('darbuotojas', function (Blueprint $table) {
-            $table->id('darbuotojo_nr');
+            $table->id('id');
             $table->string('asmens_kodas');
             $table->string('vardas');
             $table->string('pavarde');

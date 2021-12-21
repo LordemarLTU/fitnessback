@@ -66,8 +66,6 @@ class darbuotojasController extends Controller
     }
     public function getWithID(darbuotojas $message)
     {
-        // return messages::where('id', $message)->firstOrFail();
-
         return darbuotojas::query('id', $message)->firstOrFail();
     }
 }

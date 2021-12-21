@@ -10,7 +10,7 @@ class darbuotojas extends Model
     use HasFactory;
     protected $table = 'darbuotojas';
     protected $fillable = [
-        'darbuotojo_nr',
+        'id',
         'asmens_kodas',
         'vardas',
         'pavarde',
