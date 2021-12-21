@@ -27,7 +27,7 @@ class tvarkarastisController extends Controller
         ]);
     }
 
-    public function update(tvarkarastis $post)
+    public function update(tvarkarastis $id)
     {
         request()->validate([
             'sale_treniravimosi' => 'required',
@@ -35,11 +35,15 @@ class tvarkarastisController extends Controller
             'uzsiemimo_tipas' => 'required',
         ]);
 
-        $success = $post->update([
+        $success = $id->update([
             'sale_treniravimosi' => request('sale_treniravimosi'),
             'laikas' => request('laikas'),
             'uzsiemimo_tipas' => request('uzsiemimo_tipas'),
         ]);
+        return [
+            'success' => $id,
+            'success' => $success,
+        ];
     }
 
     public function destroy(tvarkarastis $delete)

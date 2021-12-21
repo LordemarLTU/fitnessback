@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class zinute extends Model
 {
     use HasFactory;
-
+    protected $table = 'zinutes';
     protected $fillable = [
         'zinutes_nr',
         'tekstas',
@@ -16,4 +16,5 @@ class zinute extends Model
         'gavejo_vardas',
         'gavejo_pavarde',
     ];
+    public $timestamps = false;
 }

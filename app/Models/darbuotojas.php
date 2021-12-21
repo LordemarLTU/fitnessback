@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class darbuotojas extends Model
 {
     use HasFactory;
-    protected $table = 'darbuotojas';
     protected $fillable = [
         'id',
         'asmens_kodas',
@@ -18,4 +17,5 @@ class darbuotojas extends Model
         'el_pastas',
         'darbo_etatas',
     ];
+    public $timestamps = false;
 }

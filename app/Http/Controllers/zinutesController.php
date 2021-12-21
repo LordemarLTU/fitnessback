@@ -15,34 +15,34 @@ class zinutesController extends Controller
     public function store()
     {
         request()->validate([
-            'darbuotojo_vardas' => 'require',
-            'pavadinimas' => 'require',
-            'dalyviu_skaicius' => 'require',
-            'trukme' => 'require',
+            'tekstas' => 'required',
+            'tema' => 'required',
+            'gavejo_vardas' => 'required',
+            'gavejo_pavarde' => 'required',
         ]);
 
         return zinute::create([
-            'darbuotojo_vardas' => require('darbuotojo_vardas'),
-            'pavadinimas' => require('pavadinimas'),
-            'dalyviu_skaicius' => require('dalyviu_skaicius'),
-            'trukme' => require('trukme'),
+            'tekstas' => request('tekstas'),
+            'tema' => request('tema'),
+            'gavejo_vardas' => request('gavejo_vardas'),
+            'gavejo_pavarde' => request('gavejo_pavarde'),
         ]);
     }
 
     public function update(zinute $post)
     {
         request()->validate([
-            'darbuotojo_vardas' => 'require',
-            'pavadinimas' => 'require',
-            'dalyviu_skaicius' => 'require',
-            'trukme' => 'require',
+            'tekstas' => 'required',
+            'tema' => 'required',
+            'gavejo_vardas' => 'required',
+            'gavejo_pavarde' => 'required',
         ]);
 
         $success = $post->update([
-            'darbuotojo_vardas' => require('darbuotojo_vardas'),
-            'pavadinimas' => require('pavadinimas'),
-            'dalyviu_skaicius' => require('dalyviu_skaicius'),
-            'trukme' => require('trukme'),
+            'tekstas' => request('tekstas'),
+            'tema' => request('tema'),
+            'gavejo_vardas' => request('gavejo_vardas'),
+            'gavejo_pavarde' => request('gavejo_pavarde'),
         ]);
     }
 
