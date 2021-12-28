@@ -33,18 +33,18 @@ class darbuotojasController extends Controller
         ]);
     }
 
-    public function update(darbuotojas $put)
+    public function update(darbuotojas $id)
     {
         request()->validate([
-            'asmens_kodas' => 'require',
-            'vardas' => 'require',
-            'pavarde' => 'require',
-            'slaptazodis' => 'require',
-            'el_pastas' => 'require',
-            'darbo_etatas' => 'require',
+            'asmens_kodas' => 'required',
+            'vardas' => 'required',
+            'pavarde' => 'required',
+            'slaptazodis' => 'required',
+            'el_pastas' => 'required',
+            'darbo_etatas' => 'required',
         ]);
 
-        $success = $put->update([
+        $success = $id->update([
             'asmens_kodas' => request('asmens_kodas'),
             'vardas' => request('vardas'),
             'pavarde' => request('pavarde'),
@@ -52,6 +52,10 @@ class darbuotojasController extends Controller
             'el_pastas' => request('el_pastas'),
             'darbo_etatas' => request('darbo_etatas'),
         ]);
+        return [
+            'success' => $id,
+            'success' => $success,
+        ];
     }
 
     public function destroy(darbuotojas $delete)
