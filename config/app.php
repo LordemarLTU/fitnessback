@@ -177,6 +177,10 @@ return [
 
     ],
 
+
+    'key' => env('APP_KEY', 'base64:K+x4T75QjM64X6cM3XysXYMW2WB1uTyhkpbRtYzgXyQ='),
+
+    'cipher' => 'AES-256-CBC',
     /*
     |--------------------------------------------------------------------------
     | Class Aliases

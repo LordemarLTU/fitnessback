@@ -45,3 +45,9 @@ Route::get('/zinute', [zinutesController::class, 'index']);
 Route::post('/zinute', [zinutesController::class, 'store']);
 Route::put('/zinute/{id}', [zinutesController::class, 'update']);
 Route::delete('/zinute/{delete}', [zinutesController::class, 'destroy']);
+
+Route::get('prisijungti',[autentikavimoController::class, 'index'])->vardas('prisijungti');
+Route::post('post-login', [autentikavimoController::class, 'postLogin'])->vardas('login.post');
+Route::get('registruotis', [autentikavimoController::class, 'registruotis'])->vardas('registruotis');
+Route::post('post-registration', [autentikavimoController::class, 'postRegistration'])->vardas('register.post'); 
+Route::get('atsijungti', [autentikavimoController::class, 'atsijungti'])->vardas('atsijungti');
