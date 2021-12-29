@@ -16,7 +16,7 @@ class autentikavimoController extends BaseController
     }
 
     public function registracija(){
-        return view('auth.registration')
+        return view('auth.registracija');
     }
 
     public function postprisijungimas(Request $request){
@@ -50,7 +50,7 @@ class autentikavimoController extends BaseController
             return view('pagrindinis');
         }
 
-        return redirect("prisijungti")->withSuccess('Reikia prisijungti')
+        return redirect("prisijungti")->withSuccess('Reikia prisijungti');
     }
 
     public function create(array $data){
@@ -70,7 +70,7 @@ class autentikavimoController extends BaseController
     public function showLogin()
     {
 
-        return view('login')
+        return view('login');
     }
 
     public function doLogout(){
@@ -82,7 +82,7 @@ class autentikavimoController extends BaseController
         $rules = array(
             'el_pastas'=>'required|el_pastas',
             'slaptazodis' => 'required|slaptazodis'
-        )
+        );
         $validator = Validator::make(input::all(), $rules);
         if($validator->fails()){
             return Redirect::to('login')->withErrors($validator)
