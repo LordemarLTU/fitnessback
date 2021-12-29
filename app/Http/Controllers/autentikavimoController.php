@@ -81,7 +81,7 @@ class autentikavimoController extends BaseController
     public function doLogin(){
         $rules = array(
             'el_pastas'=>'required|el_pastas',
-            'slaptazodis' => 'required|slaptazodis'
+            'slaptazodis' => 'required|password'
         );
         $validator = Validator::make(input::all(), $rules);
         if($validator->fails()){
