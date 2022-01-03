@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class klientas extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     protected $fillable = [
         'klientas_nr',
         'zip_kodas',

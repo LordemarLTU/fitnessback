@@ -6,10 +6,12 @@ use Illuminate\Support\Facades\Route;
 use App\Models\tvarkarastis;
 use App\Models\treniruotes_programa;
 use App\Models\zinute;
+use App\Models\klientas;
 use App\Http\Controllers\tvarkarastisController;
 use App\Http\Controllers\treniruotesProgramosController;
 use App\Http\Controllers\darbuotojasController;
 use App\Http\Controllers\zinutesController;
+use App\Http\Controllers\autentikavimoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,8 +48,6 @@ Route::post('/zinute', [zinutesController::class, 'store']);
 Route::put('/zinute/{id}', [zinutesController::class, 'update']);
 Route::delete('/zinute/{delete}', [zinutesController::class, 'destroy']);
 
-Route::get('prisijungti',[autentikavimoController::class, 'index'])->vardas('prisijungti');
-Route::post('post-login', [autentikavimoController::class, 'postLogin'])->vardas('login.post');
-Route::get('registruotis', [autentikavimoController::class, 'registruotis'])->vardas('registruotis');
-Route::post('post-registration', [autentikavimoController::class, 'postRegistration'])->vardas('register.post'); 
-Route::get('atsijungti', [autentikavimoController::class, 'atsijungti'])->vardas('atsijungti');
+Route::post('prisijungimas', [autentikavimoController::class, 'prisijungimas']);
+Route::post('registracija', [autentikavimoController::class, 'registracija']);
+Route::get('atsijungti', [autentikavimoController::class, 'atsijungti']);
